@@ -22,9 +22,10 @@
                 computerScore++;
                 return "You lose " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else if (computerChoice === 3) {
-                return "You win";
+                playerScore++;
+                return "You win " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else {
-                return "Tie";
+                return "Tie " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             }
         }
         if (playerChoice === "paper") {
