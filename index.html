@@ -17,9 +17,9 @@
 
     function playRound(playerChoice,computerChoice) {
         if (playerChoice === "rock") {
-            if (computerChoice === "paper") {
+            if (computerChoice === 2) {
                 return "You lose";
-            } else if (computerChoice === "scissors") {
+            } else if (computerChoice === 3) {
                 return "You win";
             } else {
                 return "Tie";
@@ -35,6 +35,7 @@
             }
         }
         }
+
         console.log(playRound(playerChoice,computerChoice))
     
 
