@@ -1,6 +1,6 @@
 <script>
-    let computerScore = 0;
     let playerScore = 0;
+    let computerScore = 0;
 
     const playerChoice = prompt("Choose rock paper or scissors.");
     const computerChoice = Math.floor(Math.random() * 3) + 1;
@@ -19,7 +19,8 @@
     function playRound(playerChoice,computerChoice) {
         if (playerChoice === "rock") {
             if (computerChoice === 2) {
-                return "You lose";
+                computerScore++;
+                return "You lose " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else if (computerChoice === 3) {
                 return "You win";
             } else {
