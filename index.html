@@ -1,6 +1,7 @@
 <script>
     let computerScore = 0;
     let playerScore = 0;
+
     const playerChoice = prompt("Choose rock paper or scissors.");
     const computerChoice = Math.floor(Math.random() * 3) + 1;
 
@@ -26,10 +27,19 @@
             }
         }
         if (playerChoice === "paper") {
-            if (computerChoice === "rock") {
+            if (computerChoice === 1) {
                 return "You win!"
-            } else if (computerChoice === "scissors") {
+            } else if (computerChoice === 3) {
                 return "You lose"
+            } else {
+                return "Tie"
+            }
+        }
+        if (playerChoice === "scissors") {
+            if (computerChoice === 1) {
+                return "You lose!"
+            } else if (computerChoice === 2) {
+                return "You win"
             } else {
                 return "Tie"
             }
