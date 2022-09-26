@@ -1,27 +1,29 @@
 <script>
-    let playerScore = 0;
-    let computerScore = 0;
 
     const playerChoice = prompt("Choose rock paper or scissors.");
-    const computerChoice = Math.floor(Math.random() * 3) + 1;
+    const computerChoice = computerSelection()
 
     function computerSelection() {
-        if (computerChoice === 1) {
+        let random = Math.floor(Math.random() * 3) + 1;
+        if (random === 1) {
             return "rock"
-        } else if (computerChoice === 2) {
+        } else if (random === 2) {
             return "paper"
         } else {
             return "scissors"
         }
     }
-    console.log(computerSelection());
+    console.log(computerChoice);
 
     function playRound(playerChoice,computerChoice) {
+        let playerScore = 0;
+        let computerScore = 0;
+
         if (playerChoice === "rock") {
-            if (computerChoice === 2) {
+            if (computerChoice === "paper") {
                 computerScore++;
                 return "You lose! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
-            } else if (computerChoice === 3) {
+            } else if (computerChoice === "scissors") {
                 playerScore++;
                 return "You win! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else {
@@ -29,10 +31,10 @@
             }
         }
         if (playerChoice === "paper") {
-            if (computerChoice === 1) {
+            if (computerChoice === "rock") {
                 playerScore++;
                 return "You win! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
-            } else if (computerChoice === 3) {
+            } else if (computerChoice === "scissors") {
                 computerScore++
                 return "You lose! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else {
@@ -40,22 +42,27 @@
             }
         }
         if (playerChoice === "scissors") {
-            if (computerChoice === 1) {
+            if (computerChoice === "rock") {
                 computerScore++
                 return "You lose! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
-            } else if (computerChoice === 2) {
+            } else if (computerChoice === "paper") {
                 playerScore++;
                 return "You win! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             } else {
                 return "Tie! " + "Player Score: " + playerScore + " Computer Score: " + computerScore;
             }
         }
-        }
+    }
+    console.log(playRound(playerChoice,computerChoice))
 
-        console.log(playRound(playerChoice,computerChoice))
+       
     
-
-
+//     function game() {
+//         for (let i = 0; i < 5; i++) {
+//         return playRound(playerChoice,computerChoice);
+//     }
+// }
+    
 
 
 
