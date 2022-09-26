@@ -53,8 +53,13 @@
 
     function game() {
         const playerChoice = prompt("Choose rock paper or scissors.").toLowerCase();
-        const computerChoice = computerSelection();
-        return playRound(playerChoice,computerChoice);
+        if (playerChoice === "rock" || playerChoice === "scissors" || playerChoice === "paper") {
+            const computerChoice = computerSelection();
+            return playRound(playerChoice,computerChoice);
+        } else {
+            console.log("Invalid! Refresh and try again!");
+            return ae89r023
+        }
     }
        
 
