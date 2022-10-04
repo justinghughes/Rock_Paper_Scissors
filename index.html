@@ -61,10 +61,14 @@
             return ae89r023
         }
     }
-       
 
-    for (let i = 0; i < 5; i++) {
-        game();
+    for (let i = 0; i < 100; i++) {
+        if (playerScore < 5 && computerScore < 5) {
+            game();
+        } else if (playerScore === 5 || computerScore === 5) {
+            finalResult(playerScore,computerScore);
+        }
+        
     }
 
     function finalResult(playerScore,computerScore) {
@@ -77,6 +81,6 @@
         }
     }
     
-    finalResult(playerScore,computerScore)
+    
 
 </script>
