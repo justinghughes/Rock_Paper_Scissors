@@ -24,6 +24,7 @@
     resetBtn.addEventListener('click', () => {
         playerScore = 0;
         computerScore = 0;
+        resultTest.remove();
         rockBtn.disabled = false;
         paperBtn.disabled = false;
         scissorsBtn.disabled = false;
