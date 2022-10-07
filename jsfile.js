@@ -20,10 +20,20 @@
         return game();
     });
 
+    const resetBtn = document.querySelector('#btn-reset');
+    resetBtn.addEventListener('click', () => {
+        playerScore = 0;
+        computerScore = 0;
+        rockBtn.disabled = false;
+        paperBtn.disabled = false;
+        scissorsBtn.disabled = false;
+    });
+
     function game() {
         const computerChoice = computerSelection();
         return playRound(playerChoice,computerChoice);
     }
+    
 
 
     function computerSelection() {
@@ -39,17 +49,20 @@
             return "scissors";
         }
     }
-
+const containerTest = document.querySelector('div');
+const resultTest = document.createElement('h3');
     function playRound(playerChoice,computerChoice) {
         if (playerChoice === "rock") {
             if (computerChoice === "paper") {
                 computerScore += 1;
-                console.log("You lose! Paper beats rock! Player Score: " + playerScore + " Computer Score " + computerScore); 
+                resultTest.textContent = `You lose! Paper beats rock! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else if (computerChoice === "scissors") {
                 playerScore += 1;
-                console.log("You Win! Rock beats scissors! Player Score: " + playerScore + " Computer Score " + computerScore); 
+                resultTest.textContent = `You Win! Rock beats scissors! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else {
-                console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `Tie! Player Score: ${playerScore} Computer Score: ${computerScore}.`
             }
         }
         if (playerChoice === "paper") {
@@ -77,6 +90,10 @@
         for (let i = 0; i < 5; i++) {
             if (playerScore === 5 || computerScore === 5) {
                 finalResult(playerScore,computerScore);
+                rockBtn.disabled = true;
+                paperBtn.disabled = true;
+                scissorsBtn.disabled = true;
+
             }
         }
     
