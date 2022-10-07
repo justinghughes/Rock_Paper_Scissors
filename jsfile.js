@@ -39,13 +39,10 @@
     function computerSelection() {
         let random = Math.floor(Math.random() * 3) + 1;
         if (random === 1) {
-            console.log("rock");
             return "rock";
         } else if (random === 2) {
-            console.log("paper");
             return "paper";
         } else {
-            console.log("scissors");
             return "scissors";
         }
     }
@@ -61,30 +58,37 @@ const resultTest = document.createElement('h3');
                 playerScore += 1;
                 resultTest.textContent = `You Win! Rock beats scissors! Player Score: ${playerScore} Computer Score: ${computerScore}.`
                 containerTest.appendChild(resultTest);
-            } else {
+            } else if (computerChoice === "rock") {
                 resultTest.textContent = `Tie! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             }
         }
         if (playerChoice === "paper") {
             if (computerChoice === "rock") {
                 playerScore += 1;
-                console.log("You win! Paper beats rock! Player Score: " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `You win! Paper beats rock! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else if (computerChoice === "scissors") {
                 computerScore += 1;
-                console.log("You lose! Scissors beats paper! Player Score: " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `You lose! Scissors beats paper! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else {
-                console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `Tie! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             }
         }
         if (playerChoice === "scissors") {
             if (computerChoice === "rock") {
                 computerScore += 1
-                console.log("You lose! Rock beats scissors! Player Score: " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `You lose! Rock beats scissors! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else if (computerChoice === "paper") {
                 playerScore += 1;
-                console.log("You win! Scissors beats paper! Player Score: " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `You win! Scissors beats paper! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             } else {
-                console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
+                resultTest.textContent = `Tie! Player Score: ${playerScore} Computer Score: ${computerScore}.`
+                containerTest.appendChild(resultTest);
             }
         }
         for (let i = 0; i < 5; i++) {
