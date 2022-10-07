@@ -104,14 +104,10 @@ const resultTest = document.createElement('h3');
     //         return playRound(playerChoice,computerChoice);
     // }
 
-   
     function finalResult(playerScore,computerScore) {
         if (playerScore > computerScore) {
-            console.log("Final Result: You win! Congratulations!")
+            resultTest.textContent = `Final Result: ${playerScore}-${computerScore}\nYou win! Congratulations!`
         } else if (computerScore > playerScore) {
-            console.log("Final Result: You lose! Better luck next time!")
-        } else {
-            console.log("Final Result: Tie!")
+            resultTest.textContent = `Final Result: ${playerScore}-${computerScore}\nYou lose! Better luck next time!`
         }
     }
-    
