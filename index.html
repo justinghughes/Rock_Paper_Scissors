@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="btn-rock">Rock</button>
-    <button id="btn-paper">Paper</button>
-    <button id="btn-scissors">Scissors</button>
+    <div>
+        <h1>Rock Paper Scissors</h1>
+    </div>
+    <button id="btn-rock"><img src="https://cliparting.com/wp-content/uploads/2016/10/Rock-clip-art-images-free-clipart-2.png"></button>
+    <button id="btn-paper"><img src="https://parkercon.github.io/rock-paper-scissors/images/paper.png"></button>
+    <button id="btn-scissors"><img src="https://spaces-cdn.clipsafari.com/cjmxyvazcajk4tahfy16076kzuv4"></button>
     <button id="btn-reset">New Game</button>
     <div>
     </div>
@@ -19,95 +23,3 @@
     <script src="jsfile.js"></script>
 </body>
 </html>
-<!-- <script>
-//     const buttons = document.querySelectorAll('#btn');
-//     buttons.addEventListener("click", () => {
-//         alert('hello world')
-//     })
-
-
-//     let playerScore = 0;
-//     let computerScore = 0;
-//     function computerSelection() {
-//         let random = Math.floor(Math.random() * 3) + 1;
-//         if (random === 1) {
-//             console.log("rock");
-//             return "rock";
-//         } else if (random === 2) {
-//             console.log("paper");
-//             return "paper"
-//         } else {
-//             console.log("scissors");
-//             return "scissors"
-//         }
-//     }
-
-//     function playRound(playerChoice,computerChoice) {
-//         if (playerChoice === "rock") {
-//             if (computerChoice === "paper") {
-//                 computerScore += 1;
-//                 console.log("You lose! Paper beats rock! Player Score: " + playerScore + " Computer Score " + computerScore); 
-//             } else if (computerChoice === "scissors") {
-//                 playerScore += 1;
-//                 console.log("You Win! Rock beats scissors! Player Score: " + playerScore + " Computer Score " + computerScore); 
-//             } else {
-//                 console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
-//             }
-//         }
-//         if (playerChoice === "paper") {
-//             if (computerChoice === "rock") {
-//                 playerScore += 1;
-//                 console.log("You win! Paper beats rock! Player Score: " + playerScore + " Computer Score " + computerScore);
-//             } else if (computerChoice === "scissors") {
-//                 computerScore += 1;
-//                 console.log("You lose! Scissors beats paper! Player Score: " + playerScore + " Computer Score " + computerScore);
-//             } else {
-//                 console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
-//             }
-//         }
-//         if (playerChoice === "scissors") {
-//             if (computerChoice === "rock") {
-//                 computerScore += 1
-//                 console.log("You lose! Rock beats scissors! Player Score: " + playerScore + " Computer Score " + computerScore);
-//             } else if (computerChoice === "paper") {
-//                 playerScore += 1;
-//                 console.log("You win! Scissors beats paper! Player Score: " + playerScore + " Computer Score " + computerScore);
-//             } else {
-//                 console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
-//             }
-//         }
-//     }
-
-//     function game() {
-//         const playerChoice = prompt("Choose rock paper or scissors.").toLowerCase();
-//         if (playerChoice === "rock" || playerChoice === "scissors" || playerChoice === "paper") {
-//             const computerChoice = computerSelection();
-//             return playRound(playerChoice,computerChoice);
-//         } else {
-//             console.log("Invalid! Refresh and try again!");
-//             return ae89r023
-//         }
-//     }
-
-//     for (let i = 0; i < 100; i++) {
-//         if (playerScore < 5 && computerScore < 5) {
-//             game();
-//         } else if (playerScore === 5 || computerScore === 5) {
-//             finalResult(playerScore,computerScore);
-//         }
-        
-//     }
-
-//     function finalResult(playerScore,computerScore) {
-//         if (playerScore > computerScore) {
-//             console.log("Final Result: You win! Congratulations!")
-//         } else if (computerScore > playerScore) {
-//             console.log("Final Result: You lose! Better luck next time!")
-//         } else {
-//             console.log("Final Result: Tie!")
-//         }
-//     }
-    
-    
-
-// </script> -->
