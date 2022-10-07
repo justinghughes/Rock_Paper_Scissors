@@ -74,6 +74,12 @@
                 console.log("Tie! Player Score " + playerScore + " Computer Score " + computerScore);
             }
         }
+        for (let i = 0; i < 5; i++) {
+            if (playerScore === 5 || computerScore === 5) {
+                finalResult(playerScore,computerScore);
+            }
+        }
+    
     }
 
     // function game() {
