@@ -34,8 +34,6 @@
         const computerChoice = computerSelection();
         return playRound(playerChoice,computerChoice);
     }
-    
-
 
     function computerSelection() {
         let random = Math.floor(Math.random() * 3) + 1;
@@ -103,11 +101,6 @@ const resultTest = document.createElement('h3');
         }
     
     }
-
-    // function game() {
-    //         const computerChoice = computerSelection();
-    //         return playRound(playerChoice,computerChoice);
-    // }
 
     function finalResult(playerScore,computerScore) {
         if (playerScore > computerScore) {
