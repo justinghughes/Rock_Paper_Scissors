@@ -1,8 +1,50 @@
-h1 {
+body {
+    background-color: #242331;
+}
+
+.heading {
     text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
     width: 300px;
     height: auto;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+#btn-rock, #btn-paper, #btn-scissors {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.reset-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+#btn-reset {
+    background-color: #1d7ccf;
+    border-radius: 5px 5px;
+    padding: 40px;
+    border: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+#btn-reset:hover {
+    background-color: #1661a3;
+    transform: scale(1.07)
 }
